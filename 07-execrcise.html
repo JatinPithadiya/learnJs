@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Exercise</title>
+</head>
+<body>
+    <script>
+        function greet(name) {
+            if (name === undefined) {
+                console.log("Hi, there! Please provide your name.");
+            }else{
+                console.log(`Hello, ${name} welcome to the function exercise!`);
+            }
+            
+        }
+
+        function convertToFehrenheit(celsius) {
+            if (celsius === undefined) {
+                console.log("Please provide a temperature in Celsius.");
+            } else {
+                let fahrenheit = (celsius * 9/5) + 32;
+                console.log(`${celsius}°C is equal to ${fahrenheit}°F`);
+            }
+        }
+
+        function convertToCelsius(fahrenheit) {
+            if (fahrenheit === undefined) {
+                console.log("Please provide a temperature in Fahrenheit.");
+            } else {
+                let celsius = (fahrenheit - 32) * 5/9;
+                console.log(`${fahrenheit}°F is equal to ${celsius}°C`);
+            }
+        }
+
+        function convertTemperature(temp, unit) {
+            if (unit === 'C') {
+                convertToFehrenheit(temp);
+            } else if (unit === 'F') {
+                convertToCelsius(temp);
+            } else {
+                console.log("Please provide a valid unit: 'C' for Celsius or 'F' for Fahrenheit.");
+            }
+        }
+
+        function convertLength(length, unit) {
+            if (unit === 'm') {
+                let feet = length * 3.28084;
+                console.log(`${length} meters is equal to ${feet} feet`);
+            } else if (unit === 'ft') {
+                let meters = length / 3.28084;
+                console.log(`${length} feet is equal to ${meters} meters`);
+            } else {
+                console.log("Please provide a valid unit: 'm' for meters or 'ft' for feet.");
+            }
+        }
+
+       // convertToFehrenheit(25);
+       // convertToCelsius(99);
+
+        //greet('Jatin');
+        //greet('Pithadiya');
+        //greet();
+    </script>
+</body>
+</html>

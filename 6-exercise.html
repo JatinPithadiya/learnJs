@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-Exercise</title>
+</head>
+<body>
+
+    <script>
+        let hour = new Date().getHours();
+        const name = "Jatin";
+        if(hour>=6 && hour<12) {
+            console.log("Good Morning " + name);
+        } else if(hour>=12 && hour<18) {
+            console.log("Good Afternoon " + name);
+        } else if(hour>=18 && hour<22) {
+            console.log("Good Evening  "+name);
+        } else {
+            console.log("Good Night " + name);
+        }
+
+        let age = 20;
+        let isHoliday = true;
+        if((age < 6 || age > 65) && !isHoliday) {
+            console.log("Discount available");
+        } else {
+            console.log("No discount.");
+        }
+       
+
+    </script>
+    
+</body>
+</html>
