@@ -6,8 +6,28 @@
     <title>09-dom</title>
 </head>
 <body>
+
+    <button>Hello</button>
+    <button class="js-button">Submit</button>
+
     <script>
+
+       /* document.body.innerHTML = "hello";
+        document.title = "new title"; */
+
+      /*  console.log(document.title);
+        document.title = "another title";
+        console.log(document.body);
+        console.log(document.head);
+        console.log(typeof document.body);
+        console.log(document.body.innerHTML); */
+
+        console.log(document.querySelector('button'));
+        document.querySelector('button').innerHTML = "Click Me";
+        console.log(document.querySelector('.js-button'));
         
+        //.innerText = "Click Me";
+
     </script>
     
 </body>
