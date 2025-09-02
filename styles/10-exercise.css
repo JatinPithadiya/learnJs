@@ -1,0 +1,106 @@
+ body{
+            font-family: Arial;
+        }
+        .cart-button{
+            background-color: rgb(255, 216, 20);
+            border: none;
+            padding: 5px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+
+        .request-button{
+            background-color: black;
+            border: none;
+            font-size: 12px;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .schedule-button{
+            background-color: rgb(230, 230, 230);
+            border: none;
+            font-size: 12px;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .toggle-button{
+            background-color:  rgb(230, 230, 230);
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .is-toggled{
+            background-color:black;
+            color: white;
+        }
+
+         .cost-input{
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .calculate-button{
+            border: none;
+            background-color: green;
+            color: white;
+            padding: 12px 15px;
+            font-size: 15px;
+            cursor: pointer;
+
+            
+        }
+
+        .shipping-validation{
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #calculator{
+            background-color: black;
+        }
+
+        #calculator button{
+            height: 60px;
+            width: 60px;
+            border:none;
+            border-radius: 60px;
+            font-size: 26px;
+            margin: 5px;
+            cursor: pointer;
+
+        }
+
+        .number-button{
+            background-color: rgb(51, 51, 51);
+            color: white;
+        }
+
+        .operator-button{
+            background-color: rgb(254, 160, 10);
+            color: white;
+        }
+
+        #calculator .clear-button{
+            font-size: 17px;
+        }
+
+        .calculation{
+            color: white;
+            font-size: 45px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+       

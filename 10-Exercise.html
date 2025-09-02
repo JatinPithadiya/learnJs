@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Exercise</title>
+    <link rel="stylesheet" href="styles/10-exercise.css">
+</head>
+<body>
+
+    <p>10a</p>
+    <button class="cart-button">Add to cart</button>
+    <p>10b</p>
+    <button class="request-button">Request now</button>
+    <button class="schedule-button">Schedule for later</button>
+
+    <p>10c</p>
+    <button class="js-button">Test</button>
+
+    <p>10d 10e</p>
+    <button class="js-gaming toggle-button" onclick="changeColor('.js-gaming')">Gaming</button>
+    <button class="js-music toggle-button" onclick="changeColor('.js-music')">Music</button>
+    <button class="js-tech toggle-button" onclick="changeColor('.js-tech')">Tech</button>
+
+
+    <p>10h</p>
+    <input class="js-amount cost-input" type="number" placeholder="Cost of order" onkeydown="handleCostKeydown(event);">
+    <button onclick="calculateShipping();" class="calculate-button">
+        Calculate  
+    </button>
+    <p class="js-shipping-validation shipping-validation"></p>
+
+    <p>10i</p>
+    <div id="calculator">
+    <p class="js-calculation calculation"></p>
+
+    <p>
+        <button onclick="calculate('1');" class="number-button">
+            1
+        </button>
+        <button onclick="calculate('2');" class="number-button">
+            2
+        </button>
+        <button onclick="calculate('3');" class="number-button">
+            3
+        </button>
+        <button onclick="calculate('+');" class="operator-button">
+            +
+        </button>
+    </p>
+    <p>
+        <button onclick="calculate('4');" class="number-button">
+            4
+        </button>
+        <button onclick="calculate('5');" class="number-button">
+            5
+        </button>
+        <button onclick="calculate('6');" class="number-button">
+            6
+        </button>
+        <button onclick="calculate('-');" class="operator-button">
+            -
+        </button>
+    </p>
+    <p>
+        <button onclick="calculate('7');" class="number-button">
+            7
+        </button>
+        <button onclick="calculate('8');" class="number-button">
+            8
+        </button>
+        <button onclick="calculate('9');" class="number-button">
+            9
+        </button>
+        <button onclick="calculate('*');" class="operator-button">
+            *
+        </button>
+    </p>
+    <p>
+        <button onclick="calculate('0');" class="number-button">
+            0
+        </button>
+        <button onclick="calculate('.');" class="number-button">
+            .
+        </button>
+        <button onclick="calculation = eval(calculation); displayCalcualtion();" class="number-button">
+            =
+        </button>
+        <button onclick="calculate('/');" class="operator-button">
+            /
+        </button>
+    </p>
+    <p>
+        <button onclick="calculation = ''; displayCalcualtion();" class="number-button clear-button">
+            Clear
+        </button>
+    </p>
+
+    </div>
+
+
+
+    <script src="/scripts/10-exercise.js"></script>
+
+</body>
+</html>
