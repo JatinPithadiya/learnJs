@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions Exercise</title>
+</head>
+<body>
+
+    <button onclick="run();" class="js-start-button">Start</button>
+        <br><br>
+    <button onclick="addToCart();">Add to cart</button>
+    <div class="js-cart-contents"></div>
+
+    <br><br>
+    <button class="js-add-button">Add</button>
+    <button class="js-remove-button">Remove</button>
+
+    <script>
+        //12a
+        const add = function(){
+            console.log(2+3);
+        }
+
+        add();
+        add();
+
+        //12b
+        function runTwice(func){
+            func();
+            func();
+        }
+
+        runTwice(add);
+        runTwice(function(){
+            console.log("Hello World");
+        });
+
+        //12c d
+        function run(){
+            document.querySelector(".js-start-button").textContent = "Loading...";
+            setTimeout(()=>{
+                document.querySelector(".js-start-button").textContent = "Finished!";
+            }, 1000);
+        }
+
+        //12e f
+        let timeoutId
+        function addToCart(){
+            document.querySelector(".js-cart-contents").innerHTML = "Added";
+        // First, cancel the previous timeout so that
+        // it doesn't remove the message too quickly.
+            clearTimeout(timeoutId);
+             timeoutId = setTimeout(()=>{
+                document.querySelector(".js-cart-contents").innerHTML = "";
+            }, 2000);
+        }
+
+        //12g
+        let messageCount=2;
+        setInterval(()=>{
+            if(document.title === 'App' && messageCount > 0){
+                document.title = `(${messageCount}) New Messages`;
+            } else {
+                document.title = 'App';
+            }
+            
+        }, 1000);
+
+        //12 q  
+        document.querySelector('.js-add-button').addEventListener('click', 
+        ()=> messageCount++);
+        document.querySelector('.js-remove-button').addEventListener('click', ()=> {
+                messageCount--;
+                if(messageCount < 0){
+                    messageCount = 0;
+                }
+            });
+
+        //12h i
+        function add1(){
+            messageCount++;
+        }
+
+        function remove1(){
+            messageCount--;
+            if(messageCount < 0){
+                messageCount = 0;
+            }
+        }
+
+        //12j k
+        const multiply = (num1, num2) => num1 * num2;
+        console.log(multiply(3,4));
+
+        //12l
+        const countPositiveNumbers = (arr) => {
+            let count = 0;
+            arr.forEach(element => {
+                if(element > 0){
+                    count++;
+                }
+            });
+            return count;
+        }
+
+        console.log(countPositiveNumbers([3, -4, 1, 6, -9, 0, 2]));
+
+        //12m
+        const addNum = (array, num) => {
+            return array.map(element => element + num);
+        }
+        console.log(addNum([1,2,3], 3));
+
+        //12n o
+        const removeEgg = (array) => {
+            let count = 1;
+            return array.filter(element => (element === 'egg' ? count++ > 2 : true));
+        };
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'banana', 'egg']));
+
+    </script>
+    
+</body>
+</html>
